@@ -1,0 +1,124 @@
+.my-orders {
+  padding: 120px 0 80px;
+  min-height: 100vh;
+}
+.my-orders__header { margin-bottom: 40px; }
+
+.my-orders__empty {
+  text-align: center;
+  padding: 80px;
+}
+.my-orders__empty h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 16px 0 8px;
+}
+.my-orders__empty p { color: var(--text-light); }
+
+.my-orders__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.my-orders__card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 22px 28px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  transition: var(--transition);
+  border: 1px solid var(--border);
+}
+.my-orders__card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+  border-color: var(--primary-light);
+}
+
+.my-orders__card-left {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex: 1;
+  min-width: 0;
+}
+.my-orders__icon {
+  font-size: 36px;
+  flex-shrink: 0;
+  background: rgba(255,107,53,0.1);
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.my-orders__card-left h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 400px;
+}
+.my-orders__meta {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.my-orders__card-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+.my-orders__amount {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+}
+
+.my-orders__status {
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.my-orders__status--food-processing {
+  background: rgba(246,173,85,0.15);
+  color: #C05621;
+}
+.my-orders__status--out-for-delivery {
+  background: rgba(66,153,225,0.15);
+  color: #2B6CB0;
+}
+.my-orders__status--delivered {
+  background: rgba(72,187,120,0.15);
+  color: #276749;
+}
+.my-orders__status--cancelled {
+  background: rgba(252,129,129,0.15);
+  color: #C53030;
+}
+
+.my-orders__track {
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+}
+
+@media (max-width: 768px) {
+  .my-orders__card { flex-direction: column; align-items: flex-start; }
+  .my-orders__card-right { width: 100%; justify-content: space-between; }
+  .my-orders__card-left h4 { max-width: 100%; white-space: normal; }
+  .my-orders__meta { flex-wrap: wrap; gap: 8px; }
+}

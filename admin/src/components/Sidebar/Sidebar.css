@@ -1,0 +1,106 @@
+.sidebar {
+  width: var(--sidebar-width);
+  background: var(--sidebar-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  padding: 0 0 24px;
+  overflow-y: auto;
+}
+
+/* Logo */
+.sidebar__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 12px;
+}
+.sidebar__logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 13px;
+  font-weight: 800;
+}
+.sidebar__logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: white;
+}
+.sidebar__logo-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* Nav */
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0 12px;
+  flex: 1;
+}
+
+.sidebar__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  color: var(--sidebar-text);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all var(--transition);
+}
+.sidebar__item:hover {
+  background: rgba(255,255,255,0.06);
+  color: white;
+}
+.sidebar__item--active {
+  background: var(--sidebar-active) !important;
+  color: var(--primary) !important;
+  font-weight: 600;
+}
+.sidebar__item-icon { font-size: 18px; }
+
+/* Footer */
+.sidebar__footer {
+  padding: 16px 16px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  margin: 0 12px;
+}
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.sidebar__user-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-weight: 700; font-size: 16px;
+}
+.sidebar__user-name {
+  font-size: 14px; font-weight: 600;
+  color: white;
+}
+.sidebar__user-role {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+}

@@ -1,0 +1,97 @@
+.list-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.list-page__search { max-width: 300px; }
+
+.list-page__count {
+  font-size: 13px;
+  color: var(--text-light);
+  margin-bottom: 16px;
+}
+
+.list-page__table {
+  overflow: hidden;
+}
+
+.list-page__row {
+  display: grid;
+  grid-template-columns: 70px 2fr 1fr 80px 80px 120px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  transition: background var(--transition);
+}
+.list-page__row--header {
+  background: var(--bg-main);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-light);
+  border-bottom: 1px solid var(--border);
+}
+.list-page__row--data {
+  border-bottom: 1px solid var(--border);
+  animation: fadeInUp 0.3s ease both;
+}
+.list-page__row--data:last-child { border-bottom: none; }
+.list-page__row--data:hover { background: rgba(255,107,53,0.02); }
+
+.list-page__image-wrap img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+}
+
+.list-page__name {
+  font-weight: 600;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.list-page__category-badge {
+  padding: 3px 10px;
+  background: rgba(255,107,53,0.1);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.list-page__price {
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 15px;
+}
+
+.list-page__rating { font-size: 14px; color: var(--text-medium); }
+
+.list-page__remove {
+  padding: 7px 14px;
+  background: rgba(252,129,129,0.12);
+  color: #C53030;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.list-page__remove:hover {
+  background: #C53030;
+  color: white;
+}
+
+.list-page__empty {
+  text-align: center;
+  padding: 48px;
+  color: var(--text-light);
+}
+.list-page__empty span { font-size: 48px; display: block; margin-bottom: 12px; }

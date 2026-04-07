@@ -1,0 +1,72 @@
+.admin-navbar {
+  padding: 20px 32px;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.admin-navbar__left h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+.admin-navbar__left h1 span { color: var(--primary); }
+.admin-navbar__left p { font-size: 13px; color: var(--text-light); margin-top: 2px; }
+
+.admin-navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.admin-navbar__restaurant {
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  background: rgba(45,55,72,0.08);
+  color: var(--text-medium);
+  font-size: 12px;
+  font-weight: 700;
+}
+.admin-navbar__badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  background: rgba(72,187,120,0.1);
+  color: #276749;
+  border-radius: var(--radius-full);
+  font-size: 12px;
+  font-weight: 600;
+}
+.admin-navbar__dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.admin-navbar__time {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+.admin-navbar__logout {
+  border: none;
+  border-radius: var(--radius-full);
+  background: rgba(255,107,53,0.12);
+  color: var(--primary-dark);
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}

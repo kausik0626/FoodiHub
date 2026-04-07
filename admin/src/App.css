@@ -1,0 +1,9 @@
+.admin-loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(160deg, #fff7f2 0%, #f6fafc 60%, #eef4f7 100%);
+  color: var(--text-medium);
+  font-size: 16px;
+  font-weight: 600;
+}
