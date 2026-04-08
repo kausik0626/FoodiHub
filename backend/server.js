@@ -21,10 +21,21 @@ connectDB();
 app.use(express.json());
 app.use(
   cors({
-    origin: [
-      process.env.FRONTEND_URL || "http://localhost:5173",
-      process.env.ADMIN_URL || "http://localhost:5174",
-    ],
+    origin: (origin, callback) => {
+      // Allow requests with no origin (mobile apps, curl, etc.)
+      if (!origin) return callback(null, true);
+      // Allow any localhost port during development
+      if (/^http:\/\/localhost(:\d+)?$/.test(origin)) {
+        return callback(null, true);
+      }
+      // Allow configured URLs
+      const allowed = [
+        process.env.FRONTEND_URL || "http://localhost:5173",
+        process.env.ADMIN_URL || "http://localhost:5174",
+      ];
+      if (allowed.includes(origin)) return callback(null, true);
+      callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
