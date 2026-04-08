@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:4000";
+const API_URL = "https://foodihub-1.onrender.com";
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
